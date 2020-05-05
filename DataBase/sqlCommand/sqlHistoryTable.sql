@@ -1,0 +1,22 @@
+-- Create HistoryDb
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[History](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Created] [datetime] NULL,
+	[Code] [nchar](10) NULL,		
+	[Type] [nchar](10) NULL,
+	[Message] [nchar](50) NULL,
+
+ CONSTRAINT [PK_History] PRIMARY KEY CLUSTERED
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+SELECT * FROM History;
+GO
+
